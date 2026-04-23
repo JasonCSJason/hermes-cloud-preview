@@ -1,14 +1,17 @@
 :root {
-  --bg: #f4efe6;
-  --bg2: #eee6d8;
-  --panel: rgba(255, 252, 246, 0.84);
-  --line: rgba(19, 40, 40, 0.16);
-  --line-strong: rgba(19, 40, 40, 0.26);
-  --text: #122526;
-  --muted: rgba(18, 37, 38, 0.68);
-  --accent: #c78a14;
-  --accent-soft: #8dbf39;
-  --green: #267f68;
+  --bg: #f7f1e6;
+  --bg2: #efe6d7;
+  --mid: #f3e6cf;
+  --panel-a: rgba(247, 241, 230, 0.82);
+  --panel-b: rgba(239, 230, 215, 0.88);
+  --panel-c: rgba(230, 219, 202, 0.75);
+  --line: rgba(58, 44, 31, 0.18);
+  --line-strong: rgba(58, 44, 31, 0.3);
+  --fg: #4a3a2a;
+  --fg-soft: rgba(74, 58, 42, 0.7);
+  --fg-faint: rgba(74, 58, 42, 0.52);
+  --accent: #b8860b;
+  --accent-soft: #8fa63b;
 }
 
 * { box-sizing: border-box; }
@@ -17,10 +20,10 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 0% 0%, rgba(199, 138, 20, 0.10), transparent 28%),
-    radial-gradient(circle at 100% 20%, rgba(38, 127, 104, 0.08), transparent 24%),
+    radial-gradient(circle at 0% 0%, rgba(184, 134, 11, 0.07), transparent 28%),
+    radial-gradient(circle at 100% 18%, rgba(143, 166, 59, 0.05), transparent 24%),
     linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
-  color: var(--text);
+  color: var(--fg);
   font-family: 'Inter', sans-serif;
   text-transform: uppercase;
   overflow-x: hidden;
@@ -37,17 +40,17 @@ a { color: inherit; text-decoration: none; }
 }
 
 .scan {
-  background: linear-gradient(to bottom, rgba(18,37,38,0.025), rgba(18,37,38,0) 3px, transparent 6px);
+  background: linear-gradient(to bottom, rgba(74,58,42,0.02), rgba(74,58,42,0) 3px, transparent 6px);
   background-size: 100% 6px;
-  opacity: 0.18;
+  opacity: 0.16;
   mix-blend-mode: multiply;
 }
 
 .grain {
   opacity: 0.05;
   background-image:
-    linear-gradient(rgba(18,37,38,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(18,37,38,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(74,58,42,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74,58,42,0.025) 1px, transparent 1px);
   background-size: 4px 4px;
   mix-blend-mode: multiply;
 }
@@ -58,8 +61,8 @@ a { color: inherit; text-decoration: none; }
   border-radius: 999px;
   filter: blur(120px);
 }
-.glow-a { inset: -16rem auto auto -12rem; background: rgba(199, 138, 20, 0.12); }
-.glow-b { inset: 14rem -16rem auto auto; background: rgba(38, 127, 104, 0.08); }
+.glow-a { inset: -16rem auto auto -12rem; background: rgba(184, 134, 11, 0.08); }
+.glow-b { inset: 14rem -16rem auto auto; background: rgba(143, 166, 59, 0.05); }
 
 .shell {
   width: min(1600px, calc(100% - 32px));
@@ -80,9 +83,7 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--line);
 }
 
-.top-grid {
-  margin-bottom: 24px;
-}
+.top-grid { margin-bottom: 24px; }
 
 .cell,
 .cell-xl {
@@ -95,15 +96,14 @@ a { color: inherit; text-decoration: none; }
 .hero > :last-child,
 .statement > :last-child,
 .compare > :last-child,
-.cta > :last-child {
-  border-right: 0;
-}
+.cta > :last-child { border-right: 0; }
 
 .logo {
   font-size: clamp(2.3rem, 3vw, 3rem);
   line-height: 0.9;
   font-weight: 900;
   letter-spacing: -0.06em;
+  color: var(--fg);
 }
 
 .nav,
@@ -127,7 +127,7 @@ li,
   justify-content: space-between;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
-  color: var(--muted);
+  color: var(--fg-faint);
 }
 
 .status { justify-content: flex-start; gap: 10px; }
@@ -137,30 +137,31 @@ li,
   border-radius: 999px;
   background: var(--accent-soft);
   margin-top: 4px;
-  box-shadow: 0 0 10px rgba(141,191,57,0.28);
+  box-shadow: 0 0 10px rgba(143,166,59,0.22);
 }
 
 .grid-border {
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255,255,255,0.52), rgba(255,255,255,0.30));
+  background: linear-gradient(180deg, rgba(247,241,230,0.65), rgba(239,230,215,0.46));
 }
 
 .hero { min-height: 760px; }
 .hero-main {
   grid-column: 1 / span 4;
   padding: 28px 28px 40px;
+  background: transparent;
 }
 .hero-side {
   grid-column: 5 / span 2;
   padding: 28px 20px 24px;
-  background: rgba(255,255,255,0.22);
+  background: rgba(230,219,202,0.34);
 }
 
 .kicker,
 .section-label {
   font-size: 0.84rem;
   letter-spacing: 0.16em;
-  color: var(--muted);
+  color: var(--fg-faint);
   margin: 0 0 16px;
 }
 
@@ -172,7 +173,7 @@ li,
   line-height: 0.9;
   letter-spacing: -0.08em;
   font-weight: 900;
-  color: #102526;
+  color: var(--fg);
 }
 
 .lede,
@@ -183,7 +184,7 @@ li,
 .cta-right p {
   font-size: 1.02rem;
   line-height: 1.7;
-  color: var(--muted);
+  color: var(--fg-soft);
   text-transform: none;
 }
 
@@ -193,7 +194,7 @@ li,
 }
 
 .panel-title {
-  color: var(--muted);
+  color: var(--fg-faint);
   font-size: 0.82rem;
   letter-spacing: 0.16em;
   margin-bottom: 12px;
@@ -204,17 +205,18 @@ li,
 .compare-card,
 .price {
   border: 1px solid var(--line);
-  background: var(--panel);
-  box-shadow: 0 10px 30px rgba(17, 36, 37, 0.04);
+  box-shadow: 0 10px 30px rgba(74, 58, 42, 0.035);
 }
 
 .install-box {
   padding: 14px;
   margin-bottom: 14px;
+  background: var(--panel-a);
 }
 .install-box.active {
-  border-color: rgba(141,191,57,0.34);
-  box-shadow: inset 0 0 0 1px rgba(141,191,57,0.12);
+  background: var(--panel-b);
+  border-color: rgba(143,166,59,0.34);
+  box-shadow: inset 0 0 0 1px rgba(143,166,59,0.1);
 }
 .label-row {
   display: flex;
@@ -223,12 +225,12 @@ li,
   margin-bottom: 10px;
   font-size: 0.72rem;
   letter-spacing: 0.12em;
-  color: var(--muted);
+  color: var(--fg-faint);
 }
 button {
   border: 1px solid var(--line);
   background: transparent;
-  color: var(--text);
+  color: var(--fg-soft);
   font-size: 0.68rem;
   padding: 5px 8px;
   text-transform: uppercase;
@@ -236,7 +238,7 @@ button {
 code {
   display: block;
   white-space: pre-line;
-  color: #193233;
+  color: var(--fg);
   font-size: 0.82rem;
   line-height: 1.7;
 }
@@ -265,6 +267,8 @@ code {
 .cta > :last-child { grid-column: 4 / span 3; }
 .statement h2,
 .cta h2 { font-size: clamp(2.5rem, 5vw, 4.8rem); }
+.statement .big-copy { background: var(--panel-a); }
+.statement .statement-text { background: var(--panel-c); }
 .statement-text,
 .compare-card,
 .cta-right { padding: 26px; }
@@ -279,18 +283,16 @@ code {
   display: grid;
   gap: 16px;
 }
-.feature-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.price-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
+.feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.price-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .feature-grid article,
 .price {
   min-height: 250px;
   padding: 22px;
 }
+.feature-grid article:nth-child(odd) { background: var(--panel-a); }
+.feature-grid article:nth-child(even) { background: var(--panel-b); }
 .feature-grid span,
 .price p,
 .tag {
@@ -305,6 +307,7 @@ code {
   font-size: 1.34rem;
   line-height: 1.05;
   letter-spacing: -0.04em;
+  color: var(--fg);
 }
 
 .compare-card ul,
@@ -313,39 +316,42 @@ code {
   padding-left: 18px;
 }
 .compare-card li,
-.price li {
-  margin-bottom: 10px;
-}
-.compare-card.bright { background: linear-gradient(180deg, rgba(141,191,57,0.10), rgba(255,255,255,0.78)); }
-.compare-card.muted { background: linear-gradient(180deg, rgba(199,138,20,0.06), rgba(255,255,255,0.78)); }
+.price li { margin-bottom: 10px; }
+.compare-card.bright { background: var(--panel-b); }
+.compare-card.muted { background: var(--panel-c); }
 
+.price { background: var(--panel-a); }
+.price:nth-child(3) { background: var(--panel-c); }
 .price h3 {
   margin: 0 0 16px;
   font-size: 3.4rem;
   line-height: 1;
   letter-spacing: -0.08em;
+  color: var(--fg);
 }
 .price h3 span {
   font-size: 1rem;
-  color: var(--muted);
+  color: var(--fg-faint);
   margin-left: 8px;
   letter-spacing: 0.06em;
 }
 .price.primary {
-  border-color: rgba(141,191,57,0.34);
-  background: linear-gradient(180deg, rgba(141,191,57,0.08), rgba(255,255,255,0.90));
+  border-color: rgba(143,166,59,0.34);
+  background: linear-gradient(180deg, rgba(243,230,207,0.96), rgba(239,230,215,0.9));
 }
 .tag {
-  border: 1px solid rgba(141,191,57,0.28);
+  border: 1px solid rgba(143,166,59,0.24);
   padding: 6px 8px;
 }
 
+.cta > :first-child { background: var(--panel-b); }
+.cta > :last-child { background: var(--panel-c); }
 .cta-right a {
   display: inline-flex;
   margin-top: 16px;
   padding: 12px 14px;
   border: 1px solid var(--line-strong);
-  color: #102526;
+  color: var(--fg);
   font-size: 0.84rem;
   letter-spacing: 0.12em;
 }

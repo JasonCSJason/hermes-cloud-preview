@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hermes Cloud — Hermes Agent 托管服务</title>
+    <meta
+      name="description"
+      content="Hermes Agent 托管服务官网。像 MyClaw.ai 之于 OpenClaw 一样，为 Hermes Agent 提供一键部署、托管运维、自动升级与多渠道接入。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">HC</div>
+        <div>
+          <div class="brand-name">Hermes Cloud</div>
+          <div class="brand-sub">Managed hosting for Hermes Agent</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#features">能力</a>
+        <a href="#plans">套餐</a>
+        <a href="#faq">FAQ</a>
+        <a href="#cta" class="nav-cta">立即试用</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero grid-frame">
+        <div class="hero-copy">
+          <div class="eyebrow">HERMES AGENT · MANAGED CLOUD</div>
+          <h1>
+            把 <span>Hermes Agent</span><br />
+            变成可直接交付的<br />
+            托管服务
+          </h1>
+          <p class="hero-text">
+            不是让用户自己折腾服务器、依赖、渠道接入和升级。我们把开源 Hermes Agent
+            封装成一键上线的云托管产品：部署、运维、备份、监控、升级、渠道配置，全包。
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#cta">预约内测</a>
+            <a class="btn btn-secondary" href="#plans">查看套餐</a>
+          </div>
+
+          <div class="command-stack">
+            <div class="command-card">
+              <div class="command-label">传统自部署</div>
+              <code>curl ... | bash → 配环境 → 接 API → 连消息渠道 → 自己修故障</code>
+            </div>
+            <div class="command-card active">
+              <div class="command-label">Hermes Cloud</div>
+              <code>注册账号 → 选择套餐 → 5 分钟拥有自己的 Hermes Agent</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="terminal">
+            <div class="terminal-top">
+              <span></span><span></span><span></span>
+              <strong>Hermes Cloud Console</strong>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> hermes-cloud status</p>
+              <p>Agent: <strong>online</strong></p>
+              <p>Model: nous/hermes + user configured providers</p>
+              <p>Channels: Telegram, Discord, WhatsApp, Email</p>
+              <p>Memory: persistent</p>
+              <p>Automations: 12 active cron jobs</p>
+              <p>Last backup: 03:10 UTC</p>
+              <p class="typing"><span class="prompt">$</span> your agent is ready_</p>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value">5 min</div>
+              <div class="stat-label">平均启动时间</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">24/7</div>
+              <div class="stat-label">托管运行</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">1-click</div>
+              <div class="stat-label">升级与备份</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">Multi</div>
+              <div class="stat-label">多渠道接入</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-strip">
+        <div class="strip-card">
+          <div class="strip-title">像 MyClaw.ai 之于 OpenClaw</div>
+          <p>
+            Hermes Agent 是底层开源能力，Hermes Cloud 是面向普通用户和团队的产品化托管层。
+            你卖的不是“部署脚本”，而是“随时可用的 Agent 服务”。
+          </p>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section-head">
+          <div class="eyebrow">FEATURES</div>
+          <h2>保留 Hermes 的能力，去掉运维摩擦</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>一键开通实例</h3>
+            <p>用户不用买服务器，不用 SSH，不用自己配 Node、Python、Docker 和守护进程。</p>
+          </article>
+          <article class="feature-card">
+            <h3>多渠道接入</h3>
+            <p>Telegram、Discord、WhatsApp、Email 等渠道统一配置，像 SaaS 一样开箱即用。</p>
+          </article>
+          <article class="feature-card">
+            <h3>持久记忆与自动备份</h3>
+            <p>Agent 长期记忆、配置和任务自动保存，支持定期快照与故障恢复。</p>
+          </article>
+          <article class="feature-card">
+            <h3>定时任务与后台运行</h3>
+            <p>日报、监控、提醒、研究任务在云端持续运行，不依赖本地电脑在线。</p>
+          </article>
+          <article class="feature-card">
+            <h3>托管升级</h3>
+            <p>版本更新、依赖兼容、系统补丁、观测和异常恢复由平台处理，用户只关心结果。</p>
+          </article>
+          <article class="feature-card">
+            <h3>团队级交付</h3>
+            <p>适合个人、创始人、运营团队和 AI 原生组织，把 Agent 当作可管理的生产工具。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section">
+        <div class="section-head narrow">
+          <div class="eyebrow">WHY NOW</div>
+          <h2>开源 Agent 很强，但对大多数用户还是太重了</h2>
+        </div>
+        <div class="compare-grid">
+          <div class="compare-card bad">
+            <h3>自己部署的问题</h3>
+            <ul>
+              <li>要懂服务器和运行环境</li>
+              <li>消息渠道配置复杂</li>
+              <li>升级容易炸</li>
+              <li>没监控，挂了才知道</li>
+              <li>团队成员难以统一交付</li>
+            </ul>
+          </div>
+          <div class="compare-card good">
+            <h3>托管服务的价值</h3>
+            <ul>
+              <li>开箱即用</li>
+              <li>统一控制台与配置向导</li>
+              <li>平台负责可靠性和备份</li>
+              <li>更适合收费和规模化</li>
+              <li>真正把 Hermes 做成产品</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="plans" class="section">
+        <div class="section-head">
+          <div class="eyebrow">PRICING</div>
+          <h2>三档套餐，覆盖从个人到团队</h2>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div class="price-tier">Starter</div>
+            <div class="price-value">$19<span>/mo</span></div>
+            <p>给个人用户的第一台 Hermes Agent。</p>
+            <ul>
+              <li>1 个托管实例</li>
+              <li>基础记忆与任务</li>
+              <li>2 个消息渠道</li>
+              <li>自动备份</li>
+            </ul>
+            <a href="#cta" class="btn btn-secondary block">开始使用</a>
+          </article>
+          <article class="price-card featured">
+            <div class="price-badge">Recommended</div>
+            <div class="price-tier">Pro</div>
+            <div class="price-value">$49<span>/mo</span></div>
+            <p>适合创始人、独立开发者和高频 Agent 用户。</p>
+            <ul>
+              <li>3 个托管实例</li>
+              <li>高级自动化与更多资源</li>
+              <li>4 个消息渠道</li>
+              <li>优先升级与支持</li>
+            </ul>
+            <a href="#cta" class="btn btn-primary block">预约 Pro</a>
+          </article>
+          <article class="price-card">
+            <div class="price-tier">Scale</div>
+            <div class="price-value">$99<span>/mo</span></div>
+            <p>团队、运营与 AI Native 工作流的稳定交付层。</p>
+            <ul>
+              <li>多实例与共享管理</li>
+              <li>团队配置模板</li>
+              <li>高级监控与恢复</li>
+              <li>定制化接入</li>
+            </ul>
+            <a href="#cta" class="btn btn-secondary block">联系销售</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section roadmap">
+        <div class="section-head narrow">
+          <div class="eyebrow">PRODUCT SHAPE</div>
+          <h2>这个官网应该传递的核心定位</h2>
+        </div>
+        <div class="roadmap-grid">
+          <div class="road-item"><span>01</span><p>Hermes Agent 是引擎</p></div>
+          <div class="road-item"><span>02</span><p>Hermes Cloud 是托管平台</p></div>
+          <div class="road-item"><span>03</span><p>用户购买的是结果与稳定性</p></div>
+          <div class="road-item"><span>04</span><p>不是极客玩具，是可持续交付的服务</p></div>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq-section">
+        <div class="section-head">
+          <div class="eyebrow">FAQ</div>
+          <h2>常见问题</h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>这和官方 Hermes Agent 是什么关系？</summary>
+            <p>Hermes Agent 是开源基础能力；Hermes Cloud 是基于它做的商业化托管与产品化交付层。</p>
+          </details>
+          <details>
+            <summary>我还需要自己维护服务器吗？</summary>
+            <p>不需要。部署、守护、备份、更新和基础监控由平台负责。</p>
+          </details>
+          <details>
+            <summary>支持哪些消息渠道？</summary>
+            <p>可从 Telegram、Discord、WhatsApp、Email 等主流渠道起步，后续按产品路线扩展。</p>
+          </details>
+          <details>
+            <summary>适合哪些用户？</summary>
+            <p>适合个人生产力用户、创始人、内容团队、增长团队，以及需要长期运行 Agent 的组织。</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="cta" class="section cta-section">
+        <div class="cta-card">
+          <div>
+            <div class="eyebrow">LAUNCH</div>
+            <h2>把 Hermes Agent 做成真正能卖的云产品</h2>
+            <p>
+              现在这个版本已经能作为官网首页雏形。下一步可以继续补：登录页、控制台、Waitlist 表单、品牌名和正式文案。
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="mailto:hello@hermescloud.ai">预约演示</a>
+            <a class="btn btn-secondary" href="https://hermes-agent.nousresearch.com/" target="_blank" rel="noreferrer">参考官方 Hermes</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

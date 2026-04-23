@@ -3,194 +3,169 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Hermes Cloud — Managed Hermes Agent Hosting</title>
-<meta name="description" content="Managed hosting for Hermes Agent. One-click cloud instances, persistent memory, messaging channels, backups, and upgrades." />
+<title>Hermes Cloud — The Managed Layer For Hermes Agent</title>
+<meta name="description" content="A managed hosting layer for Hermes Agent — one-click deployment, persistent memory, channel connectivity, backups, and always-on automations." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="scan"></div>
-  <div class="grain"></div>
-  <div class="glow glow-a"></div>
-  <div class="glow glow-b"></div>
+  <canvas class="fx fx-top"></canvas>
+  <div class="fx fx-mix"></div>
+  <div class="fx fx-glow"></div>
+  <div class="fx fx-noise"></div>
 
-  <main class="shell">
-    <header class="top-grid">
-      <a class="logo cell" href="#">
-        <span>Hermes</span><br />
-        <span>Cloud</span>
+  <main class="page">
+    <header class="header desktop-grid">
+      <a class="cell brand" href="#top">
+        <span>Hermes</span><br/>Cloud
       </a>
-      <a class="cell nav" href="#install">Install</a>
-      <a class="cell nav" href="#features">Features</a>
-      <a class="cell nav" href="#pricing">Pricing</a>
-      <a class="cell nav" href="https://hermes-agent.nousresearch.com/" target="_blank" rel="noreferrer">Hermes Agent</a>
-      <div class="cell status">
-        <span class="dot"></span>
-        Managed Preview
+      <a class="cell nav-link" href="#docs">Docs</a>
+      <a class="cell nav-link" href="#plans">Portal</a>
+      <a class="cell nav-link" href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="cell nav-link" href="#cta">Discord</a>
+      <div class="cell theme-cell">
+        <span>Theme</span>
+        <div class="theme-toggle"><span></span></div>
       </div>
     </header>
 
-    <section class="hero grid-border">
-      <div class="hero-main cell-xl">
-        <p class="kicker">OPEN SOURCE AGENT · MANAGED CLOUD · NO SERVER SETUP</p>
+    <header class="header mobile-bar">
+      <a class="brand mobile-brand" href="#top">
+        <span>Hermes</span><br/>Cloud
+      </a>
+      <button class="menu-btn" type="button">Menu</button>
+    </header>
+
+    <section class="hero desktop-grid">
+      <div class="hero-main cell-full">
+        <small class="eyebrow">Managed Hosting • Private Beta</small>
         <h1>
-          THE HERMES<br />
-          AGENT THAT<br />
-          RUNS FOR YOU.
+          The Managed Layer<br/>
+          For Hermes Agent.
         </h1>
-        <p class="lede">
-          Hermes Agent is the engine. Hermes Cloud is the hosted layer: one-click instances,
-          messaging channels, persistent memory, backups, upgrades, and uptime without asking
-          every user to become a DevOps operator.
-        </p>
-      </div>
-
-      <aside class="hero-side cell-xl" id="install">
-        <div class="panel-title">01 · PROVISION</div>
-        <div class="install-box">
-          <div class="label-row">
-            <span>SELF HOSTED</span>
-            <button>RISKY</button>
-          </div>
-          <code>curl -fsSL ... | bash<br/>configure env<br/>connect channels<br/>debug failures</code>
+        <div class="hero-copy">
+          <p>
+            Not a setup guide, not a DevOps checklist, not another DIY agent stack. Hermes Cloud turns the
+            open-source Hermes Agent into a hosted product with persistent memory, connected channels,
+            automatic backups, and long-running automations.
+          </p>
         </div>
-        <div class="install-box active">
-          <div class="label-row">
-            <span>HERMES CLOUD</span>
-            <button>READY</button>
+        <div class="install-stack">
+          <div class="install-block">
+            <div class="install-head">
+              <small>1. Self-host</small>
+              <button type="button">Copy</button>
+            </div>
+            <div class="code-box"><code>curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash</code></div>
           </div>
-          <code>create account<br/>choose plan<br/>connect Telegram / Discord<br/>agent online in 5 minutes</code>
+          <div class="install-block">
+            <div class="install-head">
+              <small>2. Hermes Cloud</small>
+              <button type="button">Ready</button>
+            </div>
+            <div class="code-box"><code>Create workspace → choose plan → connect channels → agent online in minutes</code></div>
+          </div>
+          <a class="primary-link" href="#cta">Reserve Access</a>
         </div>
-      </aside>
-    </section>
-
-    <section class="ticker">
-      <span>MANAGED HERMES AGENT HOSTING</span>
-      <span>PERSISTENT MEMORY</span>
-      <span>MULTI-CHANNEL REACH</span>
-      <span>BACKUPS & UPGRADES</span>
-    </section>
-
-    <section class="statement grid-border">
-      <div class="cell-xl big-copy">
-        <p class="kicker">POSITIONING</p>
-        <h2>LIKE MYCLAW.AI FOR OPENCLAW — BUT FOR HERMES AGENT.</h2>
       </div>
-      <div class="cell-xl statement-text">
-        <p>
-          The open-source project proves what the agent can do. The hosted product removes the
-          operational drag: server setup, daemon uptime, channel credentials, backups, monitoring,
-          version upgrades, and recovery.
-        </p>
-      </div>
-    </section>
 
-    <section id="features" class="features">
-      <div class="section-label">02 · FEATURES</div>
-      <div class="feature-grid">
-        <article>
-          <span>001</span>
-          <h3>ONE-CLICK INSTANCE</h3>
-          <p>No SSH, no dependency maze, no local machine requirement. A private Hermes Agent runs in the cloud.</p>
-        </article>
-        <article>
-          <span>002</span>
-          <h3>CHANNEL SETUP</h3>
-          <p>Telegram, Discord, WhatsApp, Email, and future connectors through guided setup instead of config archaeology.</p>
-        </article>
-        <article>
-          <span>003</span>
-          <h3>PERSISTENT MEMORY</h3>
-          <p>Agent memory, task state, files, schedules, and preferences survive restarts and upgrades.</p>
-        </article>
-        <article>
-          <span>004</span>
-          <h3>BACKGROUND TASKS</h3>
-          <p>Research, reminders, digests, monitoring, and automations keep running whether the user laptop is open or not.</p>
-        </article>
-        <article>
-          <span>005</span>
-          <h3>BACKUP / RESTORE</h3>
-          <p>Snapshots protect agent state. Roll back when a connector breaks or an experiment goes sideways.</p>
-        </article>
-        <article>
-          <span>006</span>
-          <h3>HOSTED UPGRADES</h3>
-          <p>Platform-managed compatibility, security patches, dependency updates, and recovery paths.</p>
-        </article>
+      <div class="hero-side cell-side">
+        <div class="terminal-frame">
+          <div class="terminal-head">
+            <span></span><span></span><span></span>
+            <strong>Hermes Cloud Console</strong>
+          </div>
+          <div class="terminal-body">
+            <pre>$ hermes-cloud status
+instance: online
+model: user-configured
+channels: telegram, discord, whatsapp
+memory: persistent
+cron jobs: 12 active
+backup: 03:10 UTC
+            </pre>
+          </div>
+        </div>
+        <small class="side-note">Cloud-hosted Hermes Agent instance with persistent state and messaging channels.</small>
       </div>
     </section>
 
-    <section class="compare grid-border">
-      <div class="cell-xl compare-card muted">
-        <p class="kicker">WITHOUT HOSTING</p>
-        <ul>
-          <li>Buy and secure a server</li>
-          <li>Install runtime dependencies</li>
-          <li>Manually wire API keys and channels</li>
-          <li>Hope the daemon stays alive</li>
-          <li>Upgrade and debug everything yourself</li>
-        </ul>
+    <section id="docs" class="feature-strip desktop-grid">
+      <div class="section-title cell-full">
+        <small class="eyebrow">Features</small>
       </div>
-      <div class="cell-xl compare-card bright">
-        <p class="kicker">WITH HERMES CLOUD</p>
-        <ul>
-          <li>Launch from a web console</li>
-          <li>Connect channels with guided flows</li>
-          <li>Run agent jobs 24/7</li>
-          <li>Restore from backups</li>
-          <li>Scale from solo user to team workflows</li>
-        </ul>
+      <article class="feature-card">
+        <h3>One-click hosting</h3>
+        <p>Launch Hermes Agent without buying, hardening, and maintaining your own server.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Persistent memory</h3>
+        <p>Keep tasks, notes, files, and long-running context alive across reboots and upgrades.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Channel connectivity</h3>
+        <p>Connect Telegram, Discord, WhatsApp, and more through guided flows instead of hand-editing configs.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Always-on automations</h3>
+        <p>Run reminders, digests, monitoring, and research jobs 24/7 even when your laptop is offline.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Backups & restore</h3>
+        <p>Protect agent state with snapshots and rollback paths when experiments go wrong.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Managed upgrades</h3>
+        <p>Let the platform handle compatibility, dependency drift, and recovery instead of the end user.</p>
+      </article>
+    </section>
+
+    <section class="statement desktop-grid">
+      <div class="cell-full statement-intro">
+        <small class="eyebrow">Positioning</small>
+        <h2>Like MyClaw.ai for OpenClaw — but for Hermes Agent.</h2>
+      </div>
+      <div class="statement-grid">
+        <div class="statement-card">
+          <small>Without hosting</small>
+          <p>Install dependencies. Configure channels. Manage uptime. Debug broken upgrades. Rebuild when things drift.</p>
+        </div>
+        <div class="statement-card">
+          <small>With Hermes Cloud</small>
+          <p>Get a ready-to-run agent service: hosted instances, managed updates, persistent memory, and product-grade delivery.</p>
+        </div>
       </div>
     </section>
 
-    <section id="pricing" class="pricing">
-      <div class="section-label">03 · PLANS</div>
-      <div class="price-grid">
-        <article class="price">
-          <p>STARTER</p>
-          <h3>$19<span>/MO</span></h3>
-          <ul>
-            <li>1 hosted agent</li>
-            <li>2 channels</li>
-            <li>daily backups</li>
-            <li>basic automations</li>
-          </ul>
-        </article>
-        <article class="price primary">
-          <div class="tag">RECOMMENDED</div>
-          <p>PRO</p>
-          <h3>$49<span>/MO</span></h3>
-          <ul>
-            <li>3 hosted agents</li>
-            <li>4 channels</li>
-            <li>priority resources</li>
-            <li>advanced tasks</li>
-          </ul>
-        </article>
-        <article class="price">
-          <p>TEAM</p>
-          <h3>$99<span>/MO</span></h3>
-          <ul>
-            <li>team console</li>
-            <li>shared templates</li>
-            <li>monitoring</li>
-            <li>custom connectors</li>
-          </ul>
-        </article>
+    <section id="plans" class="pricing desktop-grid">
+      <div class="section-title cell-full">
+        <small class="eyebrow">Plans</small>
       </div>
+      <article class="price-card">
+        <small>Starter</small>
+        <h3>$19</h3>
+        <p>One private Hermes instance for solo users.</p>
+      </article>
+      <article class="price-card featured">
+        <small>Pro</small>
+        <h3>$49</h3>
+        <p>More resources, more channels, more automations.</p>
+      </article>
+      <article class="price-card">
+        <small>Team</small>
+        <h3>$99</h3>
+        <p>Shared workflows, monitoring, templates, and support.</p>
+      </article>
     </section>
 
-    <section class="cta grid-border">
-      <div class="cell-xl">
-        <p class="kicker">PRIVATE BETA</p>
-        <h2>HOST THE AGENT. SKIP THE INFRASTRUCTURE.</h2>
-      </div>
-      <div class="cell-xl cta-right">
-        <p>Reserve an early Hermes Cloud instance and turn Hermes Agent into a product users can adopt in minutes.</p>
-        <a href="mailto:hello@hermescloud.ai">REQUEST ACCESS</a>
+    <section id="cta" class="cta desktop-grid">
+      <div class="cell-full cta-inner">
+        <small class="eyebrow">Private Beta</small>
+        <h2>Host the agent. Skip the infrastructure.</h2>
+        <p>Hermes Agent remains the engine. Hermes Cloud is the hosted product layer.</p>
+        <a href="mailto:hello@hermescloud.ai">Request Access</a>
       </div>
     </section>
   </main>
